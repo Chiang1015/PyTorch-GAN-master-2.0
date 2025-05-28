@@ -1,0 +1,8 @@
+https://www.kaggle.com/datasets/balraj98/apple2orange-dataset
+https://www.kaggle.com/datasets/tongpython/cat-and-dog     (get one of cat/dog)
+https://www.kaggle.com/datasets/balraj98/facades-dataset
+https://www.kaggle.com/datasets/shamewin/face64x64
+https://www.kaggle.com/datasets/balraj98/monet2photo
+
+use torchvision.datasets to get MNIST
+use CO-GAN_MNISTM.py => download = True => download MNISTM
