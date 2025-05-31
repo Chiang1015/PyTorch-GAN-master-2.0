@@ -35,8 +35,8 @@
 ## Installation
     $ git clone https://github.com/Chiang1015/PyTorch-GAN-master-2.0
     $ sudo pip3 install -r requirements.txt
-    Download datasets to 'Resorces' file
-    Run GAN models
+### Download datasets to 'Resorces' file
+### Run GAN models
 ## Demostration
 ## Adversarial Autoencoder
 <p align="center">
