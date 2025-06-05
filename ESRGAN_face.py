@@ -17,9 +17,9 @@ from PIL import Image
 from torchvision.models import vgg19,VGG19_Weights
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--epoch", type=int, default=18, help="epoch to start training from") # If you want to retrain, default = 0
+parser.add_argument("--epoch", type=int, default=46, help="epoch to start training from") # If you want to retrain, default = 0
 
-parser.add_argument("--n_epochs", type=int, default=200, help="number of epochs of training")
+parser.add_argument("--n_epochs", type=int, default=47, help="number of epochs of training")
 parser.add_argument("--dataset_name", type=str, default="celebA", help="name of the dataset")
 parser.add_argument("--batch_size", type=int, default=4, help="size of the batches")
 parser.add_argument("--lr", type=float, default=0.0002, help="adam: learning rate")
@@ -336,5 +336,8 @@ for epoch in range(opt.epoch+1, opt.n_epochs):
     if epoch % 50 == 0 or epoch == 199:
         sample_images(imgtag=epoch,sample = imgs_lr)
 
+
 for i in range(5):
-    sample_images(imgtag=epoch,sample = imgs_lr)
+    imgs = next(iter(dataloader))
+    imgs_lr = imgs['lr'].to(dtype=torch.float32,device=device)
+    sample_images(imgtag=f'final_{i}',sample = imgs_lr)
